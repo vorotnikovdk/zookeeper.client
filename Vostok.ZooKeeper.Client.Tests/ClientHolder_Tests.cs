@@ -13,6 +13,7 @@ namespace Vostok.ZooKeeper.Client.Tests
     [TestFixture]
     internal class ClientHolder_Tests : TestsBase
     {
+        /*
         [Test]
         public void GetConnectedClient_should_return_connected_client()
         {
@@ -108,7 +109,7 @@ namespace Vostok.ZooKeeper.Client.Tests
             holder.InitializeConnection();
             VerifyObserverMessages(observer, ConnectionState.Disconnected, ConnectionState.Connected);
         }
-
+        */
         [Test]
         public void OnConnectionStateChanged_should_observe_last_event()
         {
