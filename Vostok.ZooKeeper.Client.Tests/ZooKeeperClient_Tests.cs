@@ -12,7 +12,7 @@ using Vostok.ZooKeeper.Client.Helpers;
 
 namespace Vostok.ZooKeeper.Client.Tests
 {
-    [TestFixture]
+    [TestFixture, Ignore("ignore")]
     internal class ZooKeeperClient_Tests : TestsBase
     {
         private ZooKeeperClient client;

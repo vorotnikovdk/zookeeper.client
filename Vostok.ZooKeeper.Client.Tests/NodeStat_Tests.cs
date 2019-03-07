@@ -6,7 +6,7 @@ using Vostok.ZooKeeper.Client.Abstractions.Model;
 
 namespace Vostok.ZooKeeper.Client.Tests
 {
-    [TestFixture]
+    [TestFixture, Ignore("ignore")]
     internal class NodeStat_Tests : TestsBase
     {
         private ZooKeeperClient client;

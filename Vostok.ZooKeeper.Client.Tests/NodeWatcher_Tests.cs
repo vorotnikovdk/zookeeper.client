@@ -11,7 +11,7 @@ using Vostok.ZooKeeper.Client.Abstractions.Model.Request;
 
 namespace Vostok.ZooKeeper.Client.Tests
 {
-    [TestFixture]
+    [TestFixture, Ignore("ignore")]
     internal class NodeWatcher_Tests : TestsBase
     {
         private ZooKeeperClient client;
