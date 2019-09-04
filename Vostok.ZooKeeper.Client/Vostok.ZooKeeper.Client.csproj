@@ -77,6 +77,10 @@
     <ItemGroup>
       <MergeAssemblies Include="$(ProjectDir)$(OutputPath)$(AssemblyName).dll" />
       <MergeAssemblies Include="$(PubDir)*.dll" />
+      <MergeAssemblies Include="$(PubDir)System.Security.Claims.dll" />
+      <MergeAssemblies Include="$(PubDir)System.Security.Principal.dll" />
+      <MergeAssemblies Include="$(PubDir)System.Threading.dll" />
+      <MergeAssemblies Include="$(PubDir)ZooKeeperNetEx.dll" />
       <MergeAssemblies Remove="$(PubDir)$(AssemblyName).dll" />
       <MergeAssemblies Remove="$(PubDir)Vostok.Logging.Abstractions.dll" />
       <MergeAssemblies Remove="$(PubDir)Vostok.ZooKeeper.Client.Abstractions.dll" />
