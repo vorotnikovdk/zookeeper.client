@@ -71,7 +71,8 @@
     <Delete Files="@(OldPubDirFiles)" />
   </Target>
   <Target Name="Publishing" AfterTargets="SetupILRepackProperties" Condition="'$(Configuration)' != 'Publish'">
-    <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet publish -c Publish -f $(TargetFramework) -v diag" />
+    <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet --version" />
+    <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet publish -c Publish -f $(TargetFramework)" />
   </Target>
   <Target Name="RepackAssemblies" AfterTargets="Publishing" Condition="'$(Configuration)' != 'Publish'">
     <ItemGroup>
