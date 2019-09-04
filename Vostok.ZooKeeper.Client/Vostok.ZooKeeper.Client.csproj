@@ -86,6 +86,7 @@
       <MergeAssemblies Remove="$(PubDir)Vostok.ZooKeeper.Client.Abstractions.dll" />
     </ItemGroup>
     <Exec Command="echo pubdir $(PubDir)" />
+    <Exec Command="ls $(PubDir)" />
     <Exec WorkingDirectory="$(PubDir)" Command="$(ILRepackExecutable) /internalize /renameInternalized /log:ilrepack.log /lib:&quot;$(PubDirWithoutSlash)&quot; /out:$(ProjectDir)$(OutputPath)$(AssemblyName).dll @(MergeAssemblies->'%(RelativeDir)%(FileName)%(Extension)', ' ')" />
   </Target>
 </Project>
