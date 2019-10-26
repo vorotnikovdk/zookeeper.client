@@ -1,4 +1,5 @@
-﻿using org.apache.zookeeper;
+﻿using System.Linq;
+using org.apache.zookeeper;
 using Vostok.Commons.Collections;
 using Vostok.Logging.Abstractions;
 using Vostok.ZooKeeper.Client.Abstractions.Model;
@@ -18,7 +19,11 @@ namespace Vostok.ZooKeeper.Client
 
         public Watcher Wrap(INodeWatcher watcher)
         {
-            return watcher == null ? null : watcherWrappers.Obtain(watcher, w => new ZooKeeperNodeWatcher(w, log));
+            return watcher == null ? null : watcherWrappers.Obtain(watcher, w =>
+            {
+                log.ForContext<WatcherWrapper>().Info($"Wrapping watcher. Already has: {watcherWrappers.Count()}.");
+                return new ZooKeeperNodeWatcher(w, log);
+            });
         }
     }
 }

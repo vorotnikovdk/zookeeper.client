@@ -198,7 +198,7 @@ namespace Vostok.ZooKeeper.Client
                 if (request.IsModifyingRequest())
                     log.Info(messageTemplate, request);
                 else
-                    log.Debug(messageTemplate, request);
+                    log.Info(messageTemplate, request);
             }
             else
             {
